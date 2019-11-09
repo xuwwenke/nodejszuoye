@@ -11,7 +11,7 @@ app.get('/',function(req,res){
 app.get('/login',function(req,res){
     res.type('text/html');
     res.status(200);
-    res.sendfile(`${__dirname}/login.html`);
+    res.sendfile(__dirname+'/login.html');
 });
 app.get('/list',function(req,res){
     var rq=req.query;
@@ -19,7 +19,7 @@ app.get('/list',function(req,res){
     if (rq.username==users[0].username && rq.pwd==users[0].password) {
         res.type('text/html');
         res.status(200);
-        res.sendfile(`${__dirname}/list.html`);
+        res.sendfile(__dirname+"/list.html");
     }else {
         res.send("登陆失败，用户名或者密码错误");
     }
