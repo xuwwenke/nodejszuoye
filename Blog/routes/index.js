@@ -4,15 +4,15 @@ var router = express.Router();
 const {users,chapterList}=require('./data.json');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+// router.get('/', function(req, res, next) {
+//   res.render('index', { title: 'Express' });
+// });
 
 router.use(express.static(__dirname));
       
-router.get('/hello',function(req,res){
-    res.send('hello world');
-});
+// router.get('/hello',function(req,res){
+//     res.send('hello world');
+// });
 
 router.get('/login',function(req,res){
     res.type('text/html');
